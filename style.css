@@ -71,6 +71,12 @@ main {
   }
 }
 
+.line {
+  width: 450px;
+  border: 1px solid rgba(187, 187, 187, 0.658);
+  margin: 2rem;
+}
+
 .repository {
   background-color: #25252556;
   padding: 20px;
@@ -78,6 +84,7 @@ main {
   text-align: center;
   border-radius: 15px;
   margin-block: 1rem;
+  box-shadow: 2px 3px 10px rgba(10, 10, 10, 0.534);
 }
 
 .board {
