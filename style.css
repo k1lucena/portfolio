@@ -4,12 +4,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 body {
-  height: 100vh;
-  background: linear-gradient(180deg, rgb(2, 103, 219), rgb(1, 40, 83));
+  min-height: 100vh;
   font-family: "Poppins", serif;
+  background: linear-gradient(180deg, rgb(2, 103, 219), rgb(1, 40, 83));
+  background-repeat: no-repeat;
   color: #fff;
 }
 
@@ -27,11 +29,47 @@ h1 {
 a {
   color: inherit;
   text-decoration: none;
+}
 
-  & .repository:hover {
-    transform: scale(1.01);
-    background-color: #47474756;
+.repository {
+  transition: max-height 0.5s ease-in-out, background-color 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
+  max-height: 100px;
+  max-width: 750px;
+  min-width: 350px;
+  overflow: hidden;
+  transform: translateY(-10px);
+  background-color: #25252556;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  margin-block: 1rem;
+  box-shadow: 2px 3px 10px rgba(10, 10, 10, 0.534);
+}
+
+.repository:hover {
+  max-height: 350px;
+  background-color: #47474756;
+  transform: translateY(0);
+
+  & a {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    background-color: #25252556;
+    border-radius: 12px;
+    transition: transform 400ms;
   }
+
+  & a:hover {
+    transform: scale(1.1);
+  }
+}
+
+.repository:hover img {
+  display: block;
+  width: 300px;
+  margin: auto;
 }
 
 main {
@@ -60,6 +98,7 @@ main {
 #social {
   display: flex;
   gap: 25px;
+  padding-bottom: 40px;
   & img {
     width: 30px;
     filter: invert(75%);
@@ -76,17 +115,6 @@ main {
   min-width: 350px;
   border: 1px solid rgba(187, 187, 187, 0.658);
   margin: 2rem;
-}
-
-.repository {
-  background-color: #25252556;
-  padding: 20px;
-  max-width: 450px;
-  min-width: 350px;
-  text-align: center;
-  border-radius: 15px;
-  margin-block: 1rem;
-  box-shadow: 2px 3px 10px rgba(10, 10, 10, 0.534);
 }
 
 .board {
