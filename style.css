@@ -7,6 +7,7 @@
   user-select: none;
 }
 
+html,
 body {
   min-height: 100vh;
   font-family: "Poppins", serif;
@@ -94,9 +95,6 @@ main {
 }
 
 .content {
-  display: block;
-  max-height: 400px;
-
   & .hidden {
     display: block;
   }
