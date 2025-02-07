@@ -112,7 +112,7 @@ main {
   margin: auto;
 }
 
-section {
+.project-container {
   width: 550px;
   overflow: hidden;
   background-color: #25252556;
@@ -121,6 +121,11 @@ section {
   border-radius: 15px;
   margin-block: 1rem;
   box-shadow: 2px 3px 10px rgba(10, 10, 10, 0.534);
+}
+
+.project-container:hover {
+  transform: scale(1.03);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.2);
 }
 
 .hidden {
